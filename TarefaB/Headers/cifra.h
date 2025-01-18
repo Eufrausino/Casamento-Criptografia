@@ -11,9 +11,18 @@ typedef struct Alfabeto
 }
 alfabeto;
 
+typedef struct ContagemOcorrencias
+{
+	int ocorrencias;
+	char caractere;
+	float porcentagem;
+}
+contagemOcorrencias;
+
 // --------------- Cabeçalho das funções: -----------------------
-void criptografar(int x, char* texto);
-void descriptografar(int x, char* texto);
+char* criptografar(int x, char* texto, char* nomeArquivoCriptografado);
+char* descriptografar(int x, char* texto, char* nomeArquivoDescriptografado);
+void adivinhaChave(int chaveAleatoria, char* texto, char* nomeArquivoCriptografado);
 // --------------------------------------------------------------
 
 #endif 
