@@ -47,7 +47,7 @@ runB:create_out_dir
 compile: create_out_dir
 	$(CC) $(MAIN_SRC) -o $(MAIN_OUT)
 
-run: compile
+run: 
 	$(EXEC_MAIN)
 
 all: compile run
