@@ -6,14 +6,12 @@ void funcA(){
     //TarefaB - Chave aleatória
     srand(time(NULL));
     int chaveAleatoria = (rand()%1000)+1;
-    //printf("Chave Aleatória = %d\n", chaveAleatoria);
 
     //TarefaB - criptografia e descriptografia padrão
     //Arquivo -> string
     char nome[TAM_CAMINHO] = "Geral/Lib/test2.txt";
     char* texto;
     arquivoParaString(nome, &texto); 
-    //printf("oK\n");
 
     //Criptografia e descriptografia padrão
     char criptografia[50];
@@ -31,14 +29,19 @@ void funcA(){
 
     //Exibição do conteúdo do arquivo criptografado e descriptografado padrão
     char cripto,decripto;
+    printf("\nTexto criptografado:\n");
+    printf("=======================================================\n");
     while((cripto = fgetc(criptografado))!= EOF)printf("%c",cripto);
-    printf("\n");
+    printf("=======================================================\n");
+
+    printf("\nTexto descriptografado:\n");
+    printf("=======================================================\n");
     while((decripto=fgetc(descriptografado))!=EOF)printf("%c",decripto);
-    printf("ALEATORIO\n");	
+    printf("=======================================================\n");
 
     //Chave aleatória
     char KRYPTO[50];
-    printf("Entre com o nome do arquivo de criptografia sem extensão: ");
+    printf("\nEntre com o nome do arquivo de criptografia sem extensão para chave aleatória: ");
     scanf("%s",KRYPTO);
     adivinhaChave(chaveAleatoria, texto, KRYPTO);
 

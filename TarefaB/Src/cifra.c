@@ -38,9 +38,6 @@ char* criptografar(int x, char* texto, char* nomeArquivoCriptografado)
 	strcat(arquivoSaidaTxt, nomeArquivoCriptografado);
 	strcat(arquivoSaidaTxt, txt);
 
-	printf("%s\n", arquivoSaidaTxt);
-
-
 	FILE* saida = fopen(arquivoSaidaTxt,"w");
 	if(saida == NULL)
 	{
@@ -92,9 +89,6 @@ char* descriptografar(int x, char* texto, char* nomeArquivoDescriptografado)
 	strcat(arquivoSaidaTxt, nomeArquivoDescriptografado);  
 	strcat(arquivoSaidaTxt, txt);
 
-	printf("%s\n", arquivoSaidaTxt);
-
-	
 	FILE* saida = fopen(arquivoSaidaTxt,"w");
 	if(saida == NULL)
 	{
@@ -116,8 +110,11 @@ void adivinhaChave(int chaveAleatoria, char* texto, char* nomeArquivoCriptografa
 	int tamTexto = strlen(analisaFrequencias);
 
 	//Novo texto criptografado aleatoriamente
+	printf("\nTexto criptografado com chave aleatória:\n");
+	printf("=======================================================\n");
 	for(int i = 0; i < tamTexto; i++)printf("%c",analisaFrequencias[i]);
-	
+	printf("=======================================================\n");
+
 	//Alfabeto de letras minúsculas
 	alfabeto letrasMinusculas;
 	strcpy(letrasMinusculas.simbolos,"abcdefghijklmnopqrstuvwxyz");

@@ -1,3 +1,0 @@
-texto de teste, muito show!
-Temos aqui o uso de '\n'. O que acontecerá?
-Flamengo!
