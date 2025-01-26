@@ -98,34 +98,40 @@ void funcB(){
 }
 
 //Função menu
-void menu(){
-	
-	int condicao;
-	do
-	{
-		printf("1- Criptografia e Descriptografia padrão\n");
-		printf("2- Casamento de cadeias:\n");
-		printf("3- Sair\n");
-		scanf("%d",&condicao);
+void menu() {
+    int condicao;
+    
+    do {
+        printf("\nMenu:\n");
+        printf("1 - Criptografia e Descriptografia padrão\n");
+        printf("2 - Casamento de cadeias\n");
+        printf("3 - Sair\n");
+        printf("Escolha uma opção: ");
 
-		switch (condicao)
-		{
-		case 1:
-            funcA();
-			break;
-		case 2:
-            funcB();
-			break;
-		case 3:
-			printf("Saindo...\n");
-			break;
-		default:
-			printf("Opção inválida\n");
-			break;
-		}
-		
-	} while (condicao!=3);
-	
+        // Verifica se o usuário digitou um número válido
+        if (scanf("%d", &condicao) != 1) {
+            printf("ENTRADA INAVLIDA! Digite um número.\n");
+
+            // Limpa o buffer para evitar loop infinito
+            while (getchar() != '\n');
+            continue;  // Volta ao início do loop
+        }
+
+        switch (condicao) {
+            case 1:
+                funcA();
+                break;
+            case 2:
+                funcB();
+                break;
+            case 3:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+
+    } while (condicao != 3);
 }
 
 void limparTerminalUnix() {
