@@ -1,4 +1,4 @@
-#include "Algoritmos.h"
+#include "../Headers/Algoritmos.h"
 
 int forcaBruta(char *texto, char *padrao){
     int tamanho_txt = strlen(texto);

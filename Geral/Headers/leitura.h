@@ -6,4 +6,5 @@
 void arquivoParaString(char* arquivo, char** texto);
 
 
+
 #endif

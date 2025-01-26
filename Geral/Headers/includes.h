@@ -7,6 +7,6 @@
 #include <time.h>
 #include <ctype.h>
 
-#define TAM_CAMINHO 60
+#define TAM_CAMINHO 1000
 
 #endif

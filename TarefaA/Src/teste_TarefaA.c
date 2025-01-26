@@ -1,5 +1,5 @@
-#include "../../TarefaA/Algoritmos.h"
-#include "../Headers/leitura.h"
+#include "../../Geral/Headers/leitura.h"
+#include "../../TarefaA/Headers/Algoritmos.h"
 
 int main(){
 
@@ -11,6 +11,7 @@ int main(){
     clock_t inicio, fim;
 
     arquivoParaString(nome, &texto);
+    
 
     //printf(texto);
     //printf("\n\n\n");
